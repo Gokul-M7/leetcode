@@ -1,8 +1,9 @@
 class Solution {
     public boolean doesAliceWin(String s) {
-        for(int i=0;i<s.length();i++)
-           if("aeiou".indexOf(s.charAt(i))!=-1)
-            return true;
+       if (s.contains("a") || s.contains("e") || s.contains("i") || s.contains("o") || s.contains("u"))
+        {
+          return true;
+        }
          return false;   
     }
 }
