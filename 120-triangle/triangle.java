@@ -13,6 +13,8 @@ class Solution {
                 min[c]=Math.min(min[c] ,min[c+1]) + triangle.get(i).get(c);
             }
         }
+
+        
         return min[0];
     }
 }
