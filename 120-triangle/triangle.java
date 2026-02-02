@@ -6,6 +6,7 @@ class Solution {
         {
             min[i]=triangle.get(row-1).get(i);
         }
+        
         for(int i=row-2;i>=0;i--)
         {
             for(int c=0;c<=i;c++)
