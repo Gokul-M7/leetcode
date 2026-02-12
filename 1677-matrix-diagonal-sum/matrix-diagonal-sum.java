@@ -13,13 +13,14 @@ class Solution {
           int k=0;
           for(int j=n-1;j>=0;j--)
           {
-            if(k!=j)
-            {
             sum+=mat[k][j];
-            }
             k++;
           }
-      
+       if(n%2==0)
+       {
         return sum;
+       }
+       int l=n/2;
+        return sum-mat[l][l];
     }
 }
