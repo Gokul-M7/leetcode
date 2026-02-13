@@ -1,29 +1,17 @@
 class Solution {
     public boolean isSumEqual(String f, String s, String t) {
-        int n1=f.length();
-        int n2=s.length();
-        int n3=t.length();
-        int sum=0;
-        String m="";
-        for(int i=0;i<n1;i++)
-        {
-          m+=(f.charAt(i)-'a');
-        }
-        int n=Integer.valueOf(m);
-        sum+=n;
-        m="";
-        for(int i=0;i<n2;i++)
-        {
-          m+=(s.charAt(i)-'a');
-        }
-         n=Integer.valueOf(m);
-        sum+=n;
-         m="";
-        for(int i=0;i<n3;i++)
-        {
-          m+=(t.charAt(i)-'a');
-        }
-         n=Integer.valueOf(m);
-         return sum==n;
+         int j=0,sum1=0,sum2=0,ans=0;
+
+        for(char i:t.toCharArray())
+            ans=ans*10+(i-'a');
+
+        for(char i:f.toCharArray())
+        sum1=sum1*10+(i-'a');
+        
+
+        for(char i:s.toCharArray())
+        sum2=sum2*10+(i-'a');
+
+        return ans==(sum1+sum2);
     }
 }
