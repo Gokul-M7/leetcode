@@ -6,13 +6,10 @@ class Solution {
         int i=0,j=0;
         while(i<n)
         {
-            if(j<m)
-            {
-            if(i==spaces[j])
+            if(j<m && i==spaces[j])
             {
                 sb.append(" ");
                 j++; 
-            }
             }
             sb.append(s.charAt(i));
             i++;
