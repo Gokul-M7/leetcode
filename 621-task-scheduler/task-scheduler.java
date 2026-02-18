@@ -1,14 +1,14 @@
 class Solution {
     public int leastInterval(char[] tasks, int n) {
         int k=tasks.length;
-        HashMap<Integer,Integer> ans=new HashMap<>();
-        for(int i:tasks)
+        int[] freq=new int[26];
+        for(char c : tasks)
         {
-            ans.put(i,ans.getOrDefault(i,0)+1);
+            freq[c-'A']++;
         }
         int max=Integer.MIN_VALUE;
         int count=0;
-        for(int v:ans.values())
+        for(int v:freq)
         {
             if(v>max)
             {
