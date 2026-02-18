@@ -2,19 +2,16 @@ class Solution {
     public int leastInterval(char[] tasks, int n) {
         int k=tasks.length;
         int[] freq=new int[26];
+        int max=Integer.MIN_VALUE;
+        int count=0;
         for(char c : tasks)
         {
             freq[c-'A']++;
-        }
-        int max=Integer.MIN_VALUE;
-        int count=0;
-        for(int v:freq)
-        {
-            if(v>max)
+            if( freq[c-'A'] > max)
             {
-                max=v;
+                max=freq[c-'A'];
                 count=1;
-            }else if(v==max)
+            }else if(freq[c-'A']==max)
             {
                 count++;
             }
