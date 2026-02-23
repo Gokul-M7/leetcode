@@ -1,10 +1,9 @@
 class Solution {
     public int numOfStrings(String[] pa, String word) {
-        int n=pa.length;
         int c=0;
-        for(int i=0;i<n;i++)  
+        for(String i:pa)  
         {
-             if(word.contains(pa[i]))
+             if(word.contains(i))
              {
                 c++;
              }
